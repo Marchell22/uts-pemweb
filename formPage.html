@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Form</title>
+    <link rel="stylesheet" type="text/css" href="formPage.css">
+    <navbar class="container">
+        <div class="logo">
+            <img id="logo-orange" src="orange.jpg" alt="Logo">
+        </div>
+        <div class="title">
+            <h3 class="title-uts">ROCKSTAR</h3>
+        </div>
+    </navbar>
+</head>
+
+<body>
+    <div class="container-body">
+        <div id="sidebar" onclick="toggleMenu()">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="formPage.html">Form</a></li>
+                <li><a href="formTable.html">Table</a></li>
+            </ul>
+        </div>
+        <section>
+            <div class="right-bar"><h1>Form</h1></div>
+            <div class="right-bar">
+                <form name="form" onsubmit="return tampilkanData()">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="50%">
+                                    <table class="table1">
+                                        <tr>
+                                            <td>Nama</td>
+                                            <td>:</td>
+                                            <td><input type="text" placeholder="Nama Lengkap" name="nama" id="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>NIM</td>
+                                            <td>:</td>
+                                            <td><input type="text" placeholder="NIM" name="NIM" id="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Program Studi</td>
+                                            <td>:</td>
+                                            <td><input type="text" placeholder="Program Studi" name="programstudi"
+                                                    id="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td>:</td>
+                                            <td><input type="text" placeholder="Email" name="email" id="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Password</td>
+                                            <td>:</td>
+                                            <td><input type="password" placeholder="Password" name="password" id="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jenis Kelamin</td>
+                                            <td>:</td>
+                                            <td><input type="radio" name="gender" value="Laki-laki" id="gender">
+                                                <label class="label-radioOption" for="">Laki-laki</label>
+                                                <input type="radio" name="gender" value="Perempuan" id="gender">
+                                                <label class="label-radioOption" for="">Perempuan</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tanggal Lahir</td>
+                                            <td>:</td>
+                                            <td><input type="date" name="date" id="date"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Alamat</td>
+                                            <td>:</td>
+                                            <td>
+                                                <input type="text" name="alamat" class="pesan" id="text"></td>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="Submit" id="button" value="submit" class="submit" onclick="tampilkanData()"></input>
+                </form>
+            </div>
+        </section>
+        <div class="footer">
+            <footer>
+                <p class="footer">&copy; Hak Cipta 2023 - MARCHELL MANURUNG</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

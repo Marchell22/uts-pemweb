@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Tabel</title>
+    <link rel="stylesheet" type="text/css" href="formTable.css">
+    <navbar class="container">
+        <div class="logo">
+            <img id="logo-orange" src="orange.jpg" alt="Logo">
+        </div>
+        <div class="title">
+            <h3 class="title-uts">ROCKSTAR</h3>
+        </div>
+    </navbar>
+</head>
+
+<body>
+    <div class="container-body">
+        <div id="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="formPage.html">Form</a></li>
+                <li><a href="formTable.html">Table</a></li>
+            </ul>
+        </div>
+        <div class="right-bar">
+            <h1>Tabel</h1>
+        </div>
+        <div class="right-bar">
+            <div class="tablepage">
+                <table class="tb-data">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>NIM</th>
+                            <th>Prodi</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Alamat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="footer">
+            <footer>
+                <p class="footer">&copy; Hak Cipta 2023 - MARCHELL MANURUNG</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        var myArray = [{
+                'name': 'Marchell',
+                'nim': '120140208',
+                'prodi': 'Teknik Informatika',
+                'email': 'marchell@gmailcom',
+                'password': '123',
+                'jk': 'laki-laki',
+                'date': '02/09/2002',
+                'alamat': 'Sukarame',
+            },
+            {
+                'name': 'Dhilan',
+                'nim': '120140224',
+                'prodi': 'Teknik Informatika',
+                'email': 'Dhilan@gmailcom',
+                'password': '123',
+                'jk': 'laki-laki',
+                'date': '02/12/2002',
+                'alamat': 'Sukarame',
+            },
+            {
+                'name': 'Argie',
+                'nim': '120140253',
+                'prodi': 'Teknik Informatika',
+                'email': 'argie@gmailcom',
+                'password': '125',
+                'jk': 'laki-laki',
+                'date': '22/10/2002',
+                'alamat': 'Kota Baru',
+            },
+            {
+                'name': 'Rafi',
+                'nim': '120140208',
+                'prodi': 'Teknik Informatika',
+                'email': 'Rafi@gmailcom',
+                'password': '126',
+                'jk': 'laki-laki',
+                'date': '31/01/2002',
+                'alamat': 'Korpri',
+            },
+            {
+               'name': 'Tomu',
+               'nim': '120140209',
+               'prodi': 'Teknik Informatika',
+               'email': 'tomu@gmailcom',
+               'password': '127',
+               'jk': 'laki-laki',
+               'date': '31/12/2002',
+               'alamat': 'Korpri',
+            },
+        ]
+
+        buildTable(myArray)
+
+
+
+        function buildTable(data) {
+            var table = document.getElementById('myTable')
+
+            for (var i = 0; i < data.length; i++) {
+                var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].nim}</td>
+							<td>${data[i].prodi}</td>
+                            <td>${data[i].email}</td>
+                            <td>${data[i].password}</td>
+                            <td>${data[i].jk}</td>
+                            <td>${data[i].date}</td>
+                            <td>${data[i].alamat}</td>
+					  </tr>`
+                table.innerHTML += row
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
